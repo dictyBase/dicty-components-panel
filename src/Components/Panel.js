@@ -14,8 +14,19 @@ const PanelDiv = styled.div`
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 `
 
+type Props = {
+    style: Object,
+    collapse: boolean,
+    children: ?React$Element<any>
+}
+
 export default class Panel extends Component {
     displayName = 'A top level component for containing other panel components'
+    props: Props
+    state: {
+        click: true | false,
+        open: true | false
+    }
     constructor() {
         super()
         this.state = {
@@ -23,31 +34,27 @@ export default class Panel extends Component {
             open: true
         }
     }
-    // type Props = {
-    //     style: Object,
-    //     collapse: boolean
-    // }
-    onChildClick = () => {
-        this.setState(
-            {
-                click: true,
-                open: this.state.open ? false : true
-            })
+    onChildClick = (): void => {
+        const { open } = this.state
+        this.setState({
+            click: true,
+            open: open ? false : true
+        })
     }
-    /**
-     * @return {ReactElement[]} List of react elements
-     */
-    renderChildren = () => {
+    renderChildren = (): ?React$Element<any> => {
         const { collapse, children } = this.props
+        const { open, click } = this.state
         if (collapse) {
-            const newChildren = React.Children.map(children, (child) => {
-                return React.cloneElement(child,
-                              {
-                                 open: this.state.open,
-                                 collapse: collapse,
-                                 clickFunc: this.onChildClick,
-                                 clicked: this.state.click
-                             })
+            const newChildren: React$Element<any> = React.Children.map(children, (child) => {
+                return React.cloneElement(
+                    child,
+                    {
+                       open: open,
+                       collapse: collapse,
+                       clickFunc: this.onChildClick,
+                       clicked: click
+                   }
+                )
             })
             return newChildren
         }
