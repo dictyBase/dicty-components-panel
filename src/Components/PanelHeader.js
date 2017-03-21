@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
@@ -12,60 +13,39 @@ const HeaderDiv = styled.div`
   font-size: 14px;
   line-height: 1.42857143;
 `
-/**
- * panel header component
- */
 
-/**
- * @example
- * <PanelHeader>
- *      The chicken roaster
- * </PanelTitle>
- *
- * @example
- * <PanelHeader>
- *  <PanelTitle>
- *       The pothole
- *  </PanelTitle>
- * </PanelHeader>
- */
+type Props = {
+    style: Object,
+    collapse: boolean,
+    children: ?React$Element<any>,
+    clickFunc: Function
+}
 
 export default class PanelHeader extends Component {
     displayName = 'A component for panel header'
-    /**
-     * @type {Object}
-     * @property {Object} style An arbitary style object
-     */
-    static propTypes = {
-        style: React.PropTypes.object
-    }
-    /**
-     * @return {ReactElement[]} List of react elements
-     */
-    renderChildren = () => {
-        const { collapse, children, clickFunc } = this.props;
+    props: Props
+
+    renderChildren = (): ?React$Element<any> => {
+        const { collapse, children, clickFunc } = this.props
         if (collapse) {
-            const newChildren = React.Children.map(children, (child) => {
-                return React.cloneElement(child,
-                              {
-                                 collapse: collapse,
-                                 clickFunc: clickFunc
-                             });
-            });
-            return newChildren;
+            const newChildren: ?React$Element<any> = React.Children.map(children, (child) => {
+                return React.cloneElement(
+                    child,
+                    {
+                       collapse: collapse,
+                       clickFunc: clickFunc
+                   })
+            })
+            return newChildren
         }
-        return children;
+        return children
     }
-    /**
-     * @return {Object} gets the default style
-     * @property {Object} base The default style object
-     */
     render() {
-        const { style, collapse } = this.props;
+        const { style, collapse } = this.props
         return (
             <HeaderDiv style={ {borderBottom: collapse && '0px none #ddd', ...style} }>
                 { this.renderChildren() }
             </HeaderDiv>
-        );
+        )
     }
 }

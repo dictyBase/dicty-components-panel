@@ -1,6 +1,14 @@
-import React from 'react/addons';
-import Radium from 'radium';
+// @flow
+import React, { Component } from 'react'
+import styled from 'styled-components'
 
+const GroupDiv = styled.div`
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    margin-bottom: 20;
+`
 /**
  * panel group component
  */
@@ -33,38 +41,22 @@ import Radium from 'radium';
  *
  */
 
+type Props = {
+    style: Object,
+    children: ?React$Element<any>
+}
 
-@Radium
-export default class PanelGroup extends React.Component {
+export default class PanelGroup extends Component {
     displayName = 'A top level component for group multiple panel'
-    /**
-     * @type {Object}
-     * @property {Object} style An arbitary style object
-     */
-    static propTypes = {
-        style: React.PropTypes.object
-    }
-    /** @return {Object} gets the default style
-     * @property {Object} base The default style object
-     */
-    getStyles = () => {
-        return {
-            base: {
-                fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
-                fontSize: '14px',
-                lineHeight: 1.42857143,
-                color: '#333',
-                marginBottom: 20
-            }
-        };
-    }
+    props: Props
+
     render() {
-        const {style, children} = this.props;
+        const {style, children} = this.props
         return (
-            <div
-                style={[this.getStyles().base, style && style]}>
-                {children}
-            </div>
-        );
+            <GroupDiv
+                style={ {...style} }>
+                { children }
+            </GroupDiv>
+        )
     }
 }
