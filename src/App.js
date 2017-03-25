@@ -33,7 +33,7 @@ class App extends Component {
                  It was moops!
              </PanelBody>
          </Panel>
-         <Panel collapse open={false}>
+         <Panel collapse open={ false }>
              <PanelHeader>
                  <PanelTitle>
                      The heart attack
