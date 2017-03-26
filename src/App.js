@@ -16,24 +16,33 @@ import PanelTitle from './Components/PanelTitle'
 //     fontWeight: '200',
 //     fontSize: '20px'
 // }
+const theme = {
+    // borderColor: '#F39237',
+    borderWidth: 1,
+    borderRadius: 4,
+    // bodyBackgroundColor: '#FBFEF9',
+    bodyTextColor: '#3E6990',
+    headerBackgroundColor: '#0E79B2',
+    headerTextColor: '#191923'
+}
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <PanelGroup>
+        <PanelGroup theme={ theme }>
          <Panel collapse>
              <PanelHeader>
                  <PanelTitle>
-                     The bubble boy
+                     Panels are cool!
                  </PanelTitle>
              </PanelHeader>
              <PanelBody>
-                 It was moops!
+                 They have cool stuff inside of them.
              </PanelBody>
          </Panel>
-         <Panel collapse open={ false }>
+         {/* <Panel collapse open={ false }>
              <PanelHeader>
                  <PanelTitle>
                      The heart attack
@@ -42,7 +51,7 @@ class App extends Component {
              <PanelBody>
                  The flaming globe of sigmund
              </PanelBody>
-         </Panel>
+         </Panel> */}
         </PanelGroup>
       </div>
     )

@@ -16,6 +16,10 @@ const A = styled.a`
   text-decoration: none;
   background-color: transparent;
 
+  &:visited {
+    color: ${ props => props.theme.headerTextColor };
+  }
+
   &:hover {
       text-decoration: underline;
   }

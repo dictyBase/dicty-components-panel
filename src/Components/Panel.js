@@ -4,11 +4,11 @@ import styled from 'styled-components'
 
 const PanelDiv = styled.div`
   margin-top: 5px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: ;
+  border: 1px solid ${ props => props.theme.borderColor };
   box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.4285714;
   color: #333;
   border-radius: 4px;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
