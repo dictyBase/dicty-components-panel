@@ -21,9 +21,9 @@ const theme = {
     borderWidth: 1,
     borderRadius: 4,
     // bodyBackgroundColor: '#FBFEF9',
-    bodyTextColor: '#3E6990',
+    bodyTextColor: '#333',
     headerBackgroundColor: '#0E79B2',
-    headerTextColor: '#191923'
+    headerTextColor: '#fff'
 }
 
 
@@ -39,7 +39,9 @@ class App extends Component {
                  </PanelTitle>
              </PanelHeader>
              <PanelBody>
-                 They have cool stuff inside of them.
+                 They have cool stuff inside of them.<br />
+               How much content fits? <br />
+             As much as you want!
              </PanelBody>
          </Panel>
          {/* <Panel collapse open={ false }>
