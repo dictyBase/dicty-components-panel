@@ -12,26 +12,26 @@ const GroupDiv = styled.div`
 `
 type Props = {
     style: Object,
-    children: ?React$Element<any>
+    children: ?React$Element<any>,
+    theme: Object
 }
 
 export default class PanelGroup extends Component {
     displayName = 'A top level component for group multiple panel'
     props: Props
-
     render() {
-        const {style, children, theme } = this.props
+        const { style, children, theme } = this.props
         return (
-            <GroupDiv style={ {...style} }>
               <ThemeProvider theme={ theme }>
-                { children }
+                <GroupDiv style={ {...style} }>
+                  { children }
+                </GroupDiv>
               </ThemeProvider>
-            </GroupDiv>
         )
     }
 }
 
-PanelGroup.defaultProps = {
+PanelGroup.DefaultProps = {
     theme: {
         borderColor: '#ddd',
         borderWidth: 1,

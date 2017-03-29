@@ -19,13 +19,16 @@ const BodyDiv = styled.div`
   overflow: hidden;
   /*display: ${ props => props.open ? 'block' : 'none' }*/
 `
-
+const Padding = styled.div`
+  height: 15px;
+`
 type Props = {
     style: Object,
     collapse: boolean,
     open: boolean,
     clicked: boolean,
-    children: ?React$Element<any>
+    children: ?React$Element<any>,
+    theme: Object
 }
 
 export default class PanelBody extends React.Component {
@@ -33,50 +36,34 @@ export default class PanelBody extends React.Component {
     props: Props
 
     // Hacky functions to animate panel open/close
-    getCloseHeight = () => {
+    close = (): void => {
         this.body.style.height = getComputedStyle(this.body).height
         this.body.offsetHeight
         this.body.style.height = '0px'
     }
-    getOpenHeight = () => {
+    open = (): void => {
         const prevHeight = this.body.style.height
         this.body.style.height = 'auto'
         const endHeight = getComputedStyle(this.body).height
         this.body.style.height = prevHeight
         this.body.offsetHeight
         this.body.style.height = endHeight
-
-        this.body.addEventListener('transitionend', function transitionEnd(e) {
-        	if (e.propertyName === 'height') {
-        		// this.body.style.transition = ''
-        		this.body.style.height = 'auto'
-        		this.body.removeEventListener('transitionend', transitionEnd, false)
-        	}
-        }, false)
     }
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps: Props) {
         const { open } = this.props
         if (!nextProps.open) {
-            this.getCloseHeight()
+            this.close()
         } else if (nextProps.open) {
-            this.getOpenHeight()
+            this.open()
         }
     }
     render() {
         const { collapse, open, style, children, clicked } = this.props
         return (
-            <BodyDiv onClick={ this.getHeight } className="panel-body" innerRef={ el => this.body = el } open={ open } style={
-                {
-                  // overflow: collapse && 'hidden',
-                  // display: open ? 'block': 'none',
-                  // transition: collapse && 'height 0.5s ease-in-out, visibility 0.5s ease-in-out',
-                  ...style
-                }
-              }
-            >
-              <div style={ {height: 15} }></div>
-              { children }
-              <div style={ {height: 15} }></div>
+            <BodyDiv className="panel-body" innerRef={ el => this.body = el } open={ open } style={ {...style} }>
+              <Padding />
+                { children }
+              <Padding />
             </BodyDiv>
         )
     }

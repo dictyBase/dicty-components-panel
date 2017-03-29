@@ -17,7 +17,8 @@ const PanelDiv = styled.div`
 type Props = {
     style: Object,
     collapse: boolean,
-    children: ?React$Element<any>
+    children: ?React$Element<any>,
+    theme: Object
 }
 
 export default class Panel extends Component {

@@ -29,7 +29,8 @@ type Props = {
     style: Object,
     collapse: boolean,
     clickFunc: Function,
-    children: ?React$Element<any>
+    children: ?React$Element<any>,
+    theme: Object
 }
 export default class PanelTitle extends Component {
     displayName = 'A component for the panel title'

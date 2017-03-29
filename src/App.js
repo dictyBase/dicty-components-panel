@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 import PanelGroup from './Components/PanelGroup'
 import Panel from './Components/Panel'
 import PanelHeader from './Components/PanelHeader'
@@ -26,11 +27,15 @@ const theme = {
     headerTextColor: '#fff'
 }
 
+const Container = styled.div`
+  max-width: 800px;
+  margin: 20px auto;
+`
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Container className="App">
         <PanelGroup theme={ theme }>
          <Panel collapse>
              <PanelHeader>
@@ -44,18 +49,18 @@ class App extends Component {
              As much as you want!
              </PanelBody>
          </Panel>
-         {/* <Panel collapse open={ false }>
+         <Panel collapse open={ false }>
              <PanelHeader>
                  <PanelTitle>
-                     The heart attack
+                    Open me for a surprise!
                  </PanelTitle>
              </PanelHeader>
              <PanelBody>
-                 The flaming globe of sigmund
+                 Just kidding.
              </PanelBody>
-         </Panel> */}
+         </Panel>
         </PanelGroup>
-      </div>
+      </Container>
     )
   }
 }

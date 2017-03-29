@@ -12,13 +12,15 @@ const HeaderDiv = styled.div`
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
+  cursor: pointer;
 `
 
 type Props = {
     style: Object,
     collapse: boolean,
     children: ?React$Element<any>,
-    clickFunc: Function
+    clickFunc: Function,
+    theme: Object
 }
 
 export default class PanelHeader extends Component {
@@ -41,9 +43,9 @@ export default class PanelHeader extends Component {
         return children
     }
     render() {
-        const { style, collapse } = this.props
+        const { style, collapse, clickFunc } = this.props
         return (
-            <HeaderDiv style={ {borderBottom: collapse && '0px none #ddd', ...style} }>
+            <HeaderDiv onClick={ clickFunc } style={ {borderBottom: collapse && '0px none #ddd', ...style} }>
                 { this.renderChildren() }
             </HeaderDiv>
         )
