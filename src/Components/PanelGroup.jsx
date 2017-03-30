@@ -17,7 +17,7 @@ type Props = {
 }
 
 export default class PanelGroup extends Component {
-    displayName = 'A top level component for group multiple panel'
+    displayName = 'Panel Group'
     props: Props
     render() {
         const { style, children, theme } = this.props

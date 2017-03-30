@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const HeaderDiv = styled.div`
-  color: #333;
+  color: ${ props => props.theme.headerTextColor };
   background-color: ${ props => props.theme.headerBackgroundColor };
   border-color: #ddd;
   padding: 10px 15px;
@@ -12,7 +12,7 @@ const HeaderDiv = styled.div`
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  cursor: pointer;
+  ${ props => props.collapse && 'cursor: pointer;' };
 `
 
 type Props = {
@@ -24,7 +24,7 @@ type Props = {
 }
 
 export default class PanelHeader extends Component {
-    displayName = 'A component for panel header'
+    displayName = 'Panel Header'
     props: Props
 
     renderChildren = (): ?React$Element<any> => {
@@ -34,8 +34,8 @@ export default class PanelHeader extends Component {
                 return React.cloneElement(
                     child,
                     {
-                       collapse: collapse,
-                       clickFunc: clickFunc
+                       collapse,
+                       clickFunc
                    })
             })
             return newChildren
@@ -45,7 +45,7 @@ export default class PanelHeader extends Component {
     render() {
         const { style, collapse, clickFunc } = this.props
         return (
-            <HeaderDiv onClick={ clickFunc } style={ {borderBottom: collapse && '0px none #ddd', ...style} }>
+            <HeaderDiv collapse={ collapse } onClick={ clickFunc } style={ {borderBottom: collapse && '0px none #ddd', ...style} }>
                 { this.renderChildren() }
             </HeaderDiv>
         )

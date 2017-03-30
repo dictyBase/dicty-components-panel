@@ -32,7 +32,7 @@ type Props = {
 }
 
 export default class PanelBody extends React.Component {
-    displayName = 'A component for the panel content'
+    displayName = 'Panel Body'
     props: Props
 
     // Hacky functions to animate panel open/close

@@ -49,7 +49,7 @@ class App extends Component {
              As much as you want!
              </PanelBody>
          </Panel>
-         <Panel collapse open={ false }>
+         <Panel open={ false }>
              <PanelHeader>
                  <PanelTitle>
                     Open me for a surprise!

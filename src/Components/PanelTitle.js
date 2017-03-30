@@ -10,7 +10,7 @@ const Title = styled.h3`
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  cursor: pointer;
+  cursor: ${ props => props.collapse && 'pointer' };
 `
 const A = styled.a`
   text-decoration: none;
@@ -33,7 +33,7 @@ type Props = {
     theme: Object
 }
 export default class PanelTitle extends Component {
-    displayName = 'A component for the panel title'
+    displayName = 'Panel Title'
     props: Props
 
     render() {

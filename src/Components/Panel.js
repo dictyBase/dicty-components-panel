@@ -22,7 +22,7 @@ type Props = {
 }
 
 export default class Panel extends Component {
-    displayName = 'A top level component for containing other panel components'
+    displayName = 'Panel'
     props: Props
     state: {
         click: true | false,
