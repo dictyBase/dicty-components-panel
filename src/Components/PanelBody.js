@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 
 const BodyDiv = styled.div`
@@ -31,7 +30,7 @@ type Props = {
     theme: Object
 }
 
-export default class PanelBody extends React.Component {
+export default class PanelBody extends Component {
     displayName = 'Panel Body'
     props: Props
 
@@ -50,7 +49,6 @@ export default class PanelBody extends React.Component {
         this.body.style.height = endHeight
     }
     componentWillReceiveProps(nextProps: Props) {
-        const { open } = this.props
         if (!nextProps.open) {
             this.close()
         } else if (nextProps.open) {
@@ -58,7 +56,7 @@ export default class PanelBody extends React.Component {
         }
     }
     render() {
-        const { collapse, open, style, children, clicked } = this.props
+        const { open, style, children } = this.props
         return (
             <BodyDiv className="panel-body" innerRef={ el => this.body = el } open={ open } style={ {...style} }>
               <Padding />
