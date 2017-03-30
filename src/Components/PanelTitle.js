@@ -12,7 +12,7 @@ const Title = styled.h3`
   line-height: 1.1;
   cursor: ${ props => props.collapse && 'pointer' };
 `
-const A = styled.a`
+export const A = styled.a`
   text-decoration: none;
   background-color: transparent;
 
