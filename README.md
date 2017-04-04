@@ -12,8 +12,8 @@ A collapsible, themable panel component using React with [styled-components](htt
 ![panel groups](https://cloud.githubusercontent.com/assets/20975270/24642238/82b9a0b0-18cb-11e7-8b3e-f16275d90ccb.png)
 
 ### Collapsible
-![panel collapse animation](https://zippy.gfycat.com/SlowAdvancedApatosaur.gif)
 
+![panel collapse animation](https://cloud.githubusercontent.com/assets/20975270/24644699/95d0b454-18da-11e7-9313-834018e6f9a8.gif)
 ## Component Structure
 ![component structure diagram](https://cloud.githubusercontent.com/assets/20975270/24642171/f7c4b92c-18ca-11e7-85bb-14b3920415c2.png)
 
