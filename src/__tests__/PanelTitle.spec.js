@@ -9,7 +9,7 @@ describe('PanelTitle', () => {
             <PanelTitle />
         )
     })
-    it.skip('renders an <h3><a></a><h3> containing its children if collapse is true', () => {
+    xit('renders an <h3><a></a><h3> containing its children if collapse is true', () => {
         const wrapper = mount(
             <PanelTitle collapse={ true }>
               Test

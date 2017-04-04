@@ -30,6 +30,7 @@ const theme = {
 const Container = styled.div`
   max-width: 800px;
   margin: 20px auto;
+  padding: 0 20px;
 `
 
 class App extends Component {
