@@ -9,4 +9,4 @@ A collapsible, themable panel component using React with [styled-components](htt
 <img width="802" alt="screen shot 2017-04-03 at 8 59 39 pm" src="https://cloud.githubusercontent.com/assets/20975270/24638737/9c3470e4-18b0-11e7-8911-f910d0976327.png">
 
 ### Collapsible
-<iframe src='https://gfycat.com/ifr/CoarseOddballFlickertailsquirrel' frameborder='0' scrolling='no' width='640' height='105' allowfullscreen></iframe>
+![](https://zippy.gfycat.com/CoarseOddballFlickertailsquirrel.gif)
