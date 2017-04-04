@@ -12,7 +12,7 @@ A collapsible, themable panel component using React with [styled-components](htt
 <img width="802" alt="screen shot 2017-04-04 at 12 11 49 am" src="https://cloud.githubusercontent.com/assets/20975270/24642238/82b9a0b0-18cb-11e7-8b3e-f16275d90ccb.png">
 
 ### Collapsible
-<img width="802" alt="collapse animation" src="https://zippy.gfycat.com/SlowAdvancedApatosaur.gif">
+<img width="802" style="margin-bottom: -9px" alt="collapse animation" src="https://zippy.gfycat.com/SlowAdvancedApatosaur.gif">
 
 ## Component Structure
 <img width="802" alt="component structure" src="https://cloud.githubusercontent.com/assets/20975270/24642171/f7c4b92c-18ca-11e7-85bb-14b3920415c2.png">
