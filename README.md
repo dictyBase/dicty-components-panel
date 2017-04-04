@@ -16,6 +16,7 @@ A collapsible, themable panel component using React with [styled-components](htt
 
 ## Component Structure
 <img width="802" alt="component structure" src="https://cloud.githubusercontent.com/assets/20975270/24642171/f7c4b92c-18ca-11e7-85bb-14b3920415c2.png">
+
 ## Components
 ```js
 const panels = (
@@ -48,7 +49,25 @@ const panels = (
 ```
 
 ## Theming
-The PanelGroup component accepts a theme prop. Themable properties are as follows:
+The PanelGroup component accepts a theme prop. All of the themable properties are specified below.
+
+## Themable Properties
+
+| Property              | Type    | Description                                                                              |
+| --------------------- | ------- | ---------------------------------------------------------------------------------------- |
+| borderColor           | string  | A valid CSS color value for the `Panel`'s border                                         |
+| borderWidth           | number  | The desired border width in `px`                                                         |
+| borderRadius          | number  | The desired border radius in `px`                                                        |
+| bodyBackgroundColor   | string  | A valid CSS color value for the `PanelBody`'s background                                 |
+| bodyTextColor         | string  | A valid css color value for the text inside the `PanelBody`                              |
+| headerBackgroundColor | string  | A valid CSS color value for the `PanelHeader`'s background                               |
+| headerTextColor       | string  | A valid CSS color value for any text inside the `PanelHeader` (including a `PanelTitle`) |
+
+The following theme will yield something like this.
+
+<img width="802" alt="panel with interesting theme" src="https://cloud.githubusercontent.com/assets/20975270/24643660/04de871e-18d5-11e7-86cc-1f7f7915788d.png">
+
+
 ```js
 const theme = {
     borderColor: '#F39237',
@@ -62,14 +81,7 @@ const theme = {
 
 const panels = (
     <PanelGroup theme={ theme }>
-      <Panel collapse>
-        <PanelHeader>
-          <PanelTitle>
-          </PanelTitle>
-        </PanelHeader>
-        <PanelBody>
-        </PanelBody>
-      </Panel>
+        {/* ...arbitrary number of Panels */}
     </PanelGroup>
 )
 ```
