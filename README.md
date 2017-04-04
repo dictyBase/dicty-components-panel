@@ -3,19 +3,19 @@
 A collapsible, themable panel component using React with [styled-components](https://github.com/styled-components/styled-components).
 
 ### Open
-<img width="802" alt="panel open" src="https://cloud.githubusercontent.com/assets/20975270/24638739/9eea2482-18b0-11e7-989b-102de7a4dae8.png">
+![open panel](https://cloud.githubusercontent.com/assets/20975270/24638739/9eea2482-18b0-11e7-989b-102de7a4dae8.png)
 
 ### Closed
-<img width="802" alt="panel closed" src="https://cloud.githubusercontent.com/assets/20975270/24638737/9c3470e4-18b0-11e7-8911-f910d0976327.png">
+![closed panel](https://cloud.githubusercontent.com/assets/20975270/24638737/9c3470e4-18b0-11e7-8911-f910d0976327.png)
 
 ### Groups
-<img width="802" alt="screen shot 2017-04-04 at 12 11 49 am" src="https://cloud.githubusercontent.com/assets/20975270/24642238/82b9a0b0-18cb-11e7-8b3e-f16275d90ccb.png">
+![panel groups](https://cloud.githubusercontent.com/assets/20975270/24642238/82b9a0b0-18cb-11e7-8b3e-f16275d90ccb.png)
 
 ### Collapsible
-<img width="802" style="margin-bottom: -9px" alt="collapse animation" src="https://zippy.gfycat.com/SlowAdvancedApatosaur.gif">
+![panel collapse animation](https://zippy.gfycat.com/SlowAdvancedApatosaur.gif)
 
 ## Component Structure
-<img width="802" alt="component structure" src="https://cloud.githubusercontent.com/assets/20975270/24642171/f7c4b92c-18ca-11e7-85bb-14b3920415c2.png">
+![component structure diagram](https://cloud.githubusercontent.com/assets/20975270/24642171/f7c4b92c-18ca-11e7-85bb-14b3920415c2.png)
 
 ## Components
 ```js
