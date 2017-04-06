@@ -6,7 +6,7 @@ const Title = styled.h3`
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
-  color: inherit;
+  color: ${ props => props.theme.headerTextColor };
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
@@ -15,7 +15,8 @@ const Title = styled.h3`
 export const A = styled.a`
   text-decoration: none;
   background-color: transparent;
-
+  color: ${ props => props.theme.headerTextColor };
+  
   &:visited {
     color: ${ props => props.theme.headerTextColor };
   }
