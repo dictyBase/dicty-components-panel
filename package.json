@@ -2,6 +2,7 @@
   "name": "dicty-components-panel",
   "version": "0.1.0",
   "private": true,
+  "main": "src/index.js",
   "devDependencies": {
     "enzyme": "^2.7.1",
     "react-addons-test-utils": "^15.4.2",
