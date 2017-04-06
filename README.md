@@ -70,13 +70,12 @@ The following theme will yield something like this.
 
 ```js
 const theme = {
-    borderColor: '#F39237',
     borderWidth: 1,
-    borderRadius: 4,
-    bodyBackgroundColor: '#FBFEF9',
-    bodyTextColor: '#333',
-    headerBackgroundColor: '#0E79B2',
-    headerTextColor: '#fff'
+    borderRadius: 2,
+    bodyBackgroundColor: '#F76F8E',
+    bodyTextColor: '#1B2021',
+    headerBackgroundColor: '#3A405A',
+    headerTextColor: '#FBFAF8'
 }
 
 const panels = (
