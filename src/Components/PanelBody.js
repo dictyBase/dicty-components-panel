@@ -33,6 +33,7 @@ type Props = {
 export default class PanelBody extends Component {
     displayName = 'Panel Body'
     props: Props
+    body: any
 
     // Hacky functions to animate panel open/close
     close = (): void => {
