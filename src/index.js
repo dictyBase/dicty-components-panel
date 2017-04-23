@@ -8,16 +8,4 @@ import PanelHeader from './Components/PanelHeader'
 import PanelTitle from './Components/PanelTitle'
 import PanelBody from './Components/PanelBody'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-)
-
-
-module.exports = {
-    PanelGroup,
-    Panel,
-    PanelHeader,
-    PanelTitle,
-    PanelBody
-}
+export { PanelGroup, Panel, PanelHeader, PanelTitle, PanelBody }

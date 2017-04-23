@@ -17,7 +17,7 @@ const HeaderDiv = styled.div`
 
 type Props = {
     style: Object,
-    collapse: boolean,
+    collapse: Boolean,
     children: ?React$Element<any>,
     clickFunc: Function,
     theme: Object
