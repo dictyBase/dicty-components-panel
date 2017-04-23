@@ -2,7 +2,7 @@
   "name": "dicty-components-panel",
   "version": "0.1.0",
   "private": true,
-  "main": "dist/src/index.js",
+  "main": "lib/index.js",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-plugin-add-react-displayname": "0.0.4",
