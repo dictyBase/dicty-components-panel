@@ -5,7 +5,11 @@
   "main": "dist/src/index.js",
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-plugin-add-react-displayname": "0.0.4",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^2.7.1",
     "flow-bin": "^0.44.2",
     "react-addons-test-utils": "^15.4.2",
@@ -18,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "babel ./src/index.js --presets babel-preset-es2015 --out-dir dist",
+    "build": "babel src  --out-dir lib",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
