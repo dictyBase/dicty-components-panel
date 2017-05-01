@@ -35,6 +35,9 @@ export default class PanelBody extends Component {
     props: Props
     body: any
 
+    componentDidMount() {
+        this.body.addEventListener('transitionend', this.handleTransitionend)
+    }
     // Hacky functions to animate panel open/close
     close = (): void => {
         this.body.style.height = getComputedStyle(this.body).height
@@ -49,12 +52,21 @@ export default class PanelBody extends Component {
         this.body.offsetHeight
         this.body.style.height = endHeight
     }
+    handleTransitionend = (e) => {
+        const { open } = this.props
+        if (open && e.propertyName === 'height') {
+            this.body.style.height = 'auto'
+        }
+    }
     componentWillReceiveProps(nextProps: Props) {
         if (!nextProps.open) {
             this.close()
         } else if (nextProps.open) {
             this.open()
         }
+    }
+    componentWillUnmount() {
+        this.body.removeEventListener('transitionend', this.handleTransitionend)
     }
     render() {
         const { open, style, children } = this.props

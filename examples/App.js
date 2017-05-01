@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import styled from 'styled-components'
-import PanelGroup from './Components/PanelGroup'
-import Panel from './Components/Panel'
-import PanelHeader from './Components/PanelHeader'
-import PanelBody from './Components/PanelBody'
-import PanelTitle from './Components/PanelTitle'
+import PanelGroup from '../src/Components/PanelGroup'
+import Panel from '../src/Components/Panel'
+import PanelHeader from '../src/Components/PanelHeader'
+import PanelBody from '../src/Components/PanelBody'
+import PanelTitle from '../src/Components/PanelTitle'
+// import './index.css'
 
 // const panelStyle = { border: '1px solid #D2D7D3' }
 // const headerStyle = {
@@ -93,5 +95,4 @@ class App extends Component {
     )
   }
 }
-
-export default App;
+ReactDOM.render(<App />, document.getElementById('root'))
