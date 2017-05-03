@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const HeaderDiv = styled.div`
   color: ${ props => props.theme.headerTextColor };
-  background-color: ${ props => props.theme.headerBackgroundColor };
+  background-color: ${ props => props.theme.headerBackgroundColor ? props.theme.headerBackgroundColor : '#15317e' };
   border-color: #ddd;
   padding: 10px 15px;
   border-top-left-radius: 3px;

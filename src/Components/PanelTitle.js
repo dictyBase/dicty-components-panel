@@ -6,24 +6,24 @@ const Title = styled.h3`
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
-  color: ${ props => props.theme.headerTextColor };
+  color: ${ props => props.theme.headerTextColor ? props.theme.headerTextColor : 'white' };
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   cursor: ${ props => props.collapse && 'pointer' };
 `
-export const A = styled.a`
-  text-decoration: none;
+export const TitleCollapse = styled.div`
+  ${''/* text-decoration: none; */}
   background-color: transparent;
-  color: ${ props => props.theme.headerTextColor };
-  
-  &:visited {
-    color: ${ props => props.theme.headerTextColor };
-  }
+  color: ${ props => props.theme.headerTextColor ? props.theme.headerTextColor : 'white' };
+  cursor: pointer;
+  ${''/* &:visited {
+    color: ${ props => props.theme.headerTextColor ? props.theme.headerTextColor : 'white' };
+  } */}
 
-  &:hover {
-      text-decoration: underline;
-  }
+  ${''/* &:hover {
+      text-decoration: none;
+  } */}
 `
 
 type Props = {
@@ -42,9 +42,9 @@ export default class PanelTitle extends Component {
         let elem: ?React$Element<any>
         if (collapse) {
             elem = (
-                <A href="#" onClick={ clickFunc }>
+                <TitleCollapse onClick={ clickFunc }>
                   { children }
-                </A>
+                </TitleCollapse>
             )
         } else {
             elem = children
