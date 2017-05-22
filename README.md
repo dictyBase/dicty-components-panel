@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/dictyBase/dicty-components-panel.svg?branch=master)](https://travis-ci.org/dictyBase/dicty-components-panel)
+[![Dependency Status](https://david-dm.org/dictybase/dicty-components-panel.svg)](https://david-dm.org/dictybase/dicty-components-panel)
+[![Dev Dependency Status](https://david-dm.org/dictybase/dicty-components-panel/dev-status.svg)](https://david-dm.org/dictybase/dicty-components-panel?type=dev)
+
 # Collapsible Panel Component
 
 A collapsible, themable panel component using React with [styled-components](https://github.com/styled-components/styled-components).
